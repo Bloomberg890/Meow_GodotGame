@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwhdlrk04ogg"]
+
+[ext_resource type="Script" uid="uid://ef1o3rkyf40o" path="res://cat_4.gd" id="1_rmal5"]
+[ext_resource type="Texture2D" uid="uid://b8c0usogetmay" path="res://FreeCats2.png" id="1_wmwge"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmal5"]
+atlas = ExtResource("1_wmwge")
+region = Rect2(0, 124, 64, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7jsn"]
+atlas = ExtResource("1_wmwge")
+region = Rect2(64, 124, 64, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cstqn"]
+atlas = ExtResource("1_wmwge")
+region = Rect2(128, 124, 64, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26fke"]
+atlas = ExtResource("1_wmwge")
+region = Rect2(192, 124, 64, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jxhny"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmal5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7jsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cstqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26fke")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_rmal5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_jxhny")
+frame_progress = 0.807648
