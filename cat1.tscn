@@ -40,12 +40,10 @@ animations = [{
 }]
 
 [node name="Area2D" type="Area2D"]
-position = Vector2(11, 14)
 script = ExtResource("1_xbbap")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(130, 84)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2fbf8")
 frame_progress = 0.058411

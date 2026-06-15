@@ -31,6 +31,5 @@ script = ExtResource("1_r8p35")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(44, 40)
 sprite_frames = SubResource("SpriteFrames_12756")
 frame_progress = 0.466875

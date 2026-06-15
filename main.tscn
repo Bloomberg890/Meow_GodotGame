@@ -825,8 +825,6 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 3.0
-offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_0xm2m")
@@ -852,19 +850,10 @@ layer_5/tile_data = PackedInt32Array(327686, 851968, 1, 327687, 917504, 1, 32768
 layer_6/name = "L6-House"
 layer_6/tile_data = PackedInt32Array(458759, 0, 3, 524295, 0, 4, 589831, 0, 5, 655367, 0, 6, 262152, 65536, 0, 327688, 65536, 1, 393224, 65536, 2, 458760, 65536, 3, 524296, 65536, 4, 589832, 65536, 5, 655368, 65536, 6, 720904, 65536, 7, 262153, 131072, 0, 327689, 131072, 1, 393225, 131072, 2, 458761, 131072, 3, 524297, 131072, 4, 589833, 131072, 5, 655369, 131072, 6, 720905, 131072, 7, 262154, 196608, 0, 327690, 196608, 1, 393226, 196608, 2, 458762, 196608, 3, 524298, 196608, 4, 589834, 196608, 5, 655370, 196608, 6, 720906, 196608, 7, 262155, 262144, 0, 327691, 262144, 1, 393227, 262144, 2, 458763, 262144, 3, 524299, 262144, 4, 589835, 262144, 5, 655371, 262144, 6, 720907, 262144, 7, 262156, 327680, 0, 327692, 327680, 1, 393228, 327680, 2, 458764, 327680, 3, 524300, 327680, 4, 589836, 327680, 5, 655372, 327680, 6, 720908, 327680, 7, 327693, 393216, 1, 393229, 393216, 2, 458765, 393216, 3, 524301, 393216, 4, 589837, 393216, 5, 655373, 393216, 6, 720909, 393216, 7, 393230, 458752, 2, 458766, 458752, 3, 524302, 458752, 4, 589838, 458752, 5, 655374, 458752, 6, 720910, 458752, 7, 393231, 524288, 2, 458767, 524288, 3, 524303, 524288, 4, 589839, 524288, 5, 655375, 524288, 6, 720911, 524288, 7, 786451, 196608, 31, 851987, 196608, 32, 917523, 196608, 33, 786452, 262144, 31, 851988, 262144, 32, 917524, 262144, 33, 786453, 327680, 31, 851989, 327680, 32, 917525, 327680, 33)
 
-[node name="AnimatedSprite2D" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(1062, 289)
-scale = Vector2(2, 2)
-
-[node name="AnimatedSprite2D3" parent="." instance=ExtResource("7_272bh")]
-position = Vector2(908, 291)
-scale = Vector2(2, 2)
-
 [node name="HomeCollision" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(382.188, 257.637)
 rotation = 1.58522
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_272bh")
 
 [node name="AnimatedSprite2D2" parent="." instance=ExtResource("5_lquwl")]
@@ -872,28 +861,42 @@ position = Vector2(304, 143)
 scale = Vector2(2, 2)
 frame_progress = 0.056311
 
-[node name="Cat" parent="." instance=ExtResource("8_kek77")]
-position = Vector2(551, 220)
+[node name="Trees" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Area2D2" parent="." instance=ExtResource("10_vivmo")]
-position = Vector2(537, 489)
-
-[node name="Area2D3" parent="." instance=ExtResource("11_2cqfq")]
-position = Vector2(592, 199)
-
-[node name="Exc_Black" parent="." instance=ExtResource("12_yaehf")]
-position = Vector2(320, 410)
-
-[node name="Area2D5" parent="." instance=ExtResource("13_074og")]
-position = Vector2(991, 370)
-
-[node name="AppleTree" parent="." instance=ExtResource("8_5vw27")]
-position = Vector2(1075, 438)
+[node name="Area2D" parent="Trees" instance=ExtResource("6_7mycd")]
+position = Vector2(900, 291)
 scale = Vector2(2, 2)
 
-[node name="Area2D6" parent="." instance=ExtResource("14_cegan")]
-position = Vector2(126, 379)
+[node name="AppleTree" parent="Trees" instance=ExtResource("8_5vw27")]
+position = Vector2(969, 419)
+scale = Vector2(2, 2)
 
-[node name="Area2D7" parent="." instance=ExtResource("15_82xsv")]
+[node name="Area2D2" parent="Trees" instance=ExtResource("7_272bh")]
+position = Vector2(883, 459)
+scale = Vector2(2, 2)
+
+[node name="Cats" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="BC_Cry" parent="Cats" instance=ExtResource("14_cegan")]
+position = Vector2(122, 294)
+
+[node name="BC_Exc" parent="Cats" instance=ExtResource("12_yaehf")]
+position = Vector2(657, 291)
+
+[node name="WC_Exc" parent="Cats" instance=ExtResource("10_vivmo")]
+position = Vector2(501, 513)
+
+[node name="WC_Cry2" parent="Cats" instance=ExtResource("11_2cqfq")]
+position = Vector2(1095, 378)
+
+[node name="DC" parent="Cats" instance=ExtResource("15_82xsv")]
 position = Vector2(262, 409)
 scale = Vector2(3, 3)
+
+[node name="BC_Sleep" parent="Cats" instance=ExtResource("13_074og")]
+position = Vector2(1025, 282)
+
+[node name="WC_Sleep" parent="Cats" instance=ExtResource("8_kek77")]
+position = Vector2(1040, 259)
